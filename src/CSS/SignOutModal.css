@@ -1,0 +1,69 @@
+:root {
+    --font-color-primary: #000;
+    --font-color-secondary: #747474;
+}
+
+.headerLeft div.pageName {
+    color: #636363;
+    margin-left: 25rem;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.headerRight {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 7rem;
+    gap: 1rem;
+}
+
+
+.headerRight .userName {
+    margin-top: .5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 10rem;
+    color: var(--font-color-secondary);
+}
+
+.pageHeadContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerLeft .pageName {
+    position: relative;
+    left: -25rem;
+}
+
+.headerRight:has(.logo, .userName) {
+    position: relative;
+    right: -50%;
+}
+
+
+/* ! ========================= Media Queries ========================= */
+@media screen and (max-width: 1440px) {
+    .pageHeadContainer{
+       display: grid;
+       gap: 1rem;
+       margin-left: -24rem;
+    }
+    .headerLeft div.pageName{
+        position: absolute;
+        left: -3rem;
+        margin-top: 3.4rem;
+    }
+    .headerRight{
+        position: relative;
+        left: 28rem;
+    }
+}
+/* @media screen and (min-width: 1658px) {
+    .pageHeadContainer{
+    }
+    .pageName{
+
+    }
+} */

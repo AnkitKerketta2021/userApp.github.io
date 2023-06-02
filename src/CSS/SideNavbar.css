@@ -1,0 +1,105 @@
+.sideNavigationBar {
+    position: relative;
+    top: 35%;
+    left: -45%;
+    transform: translate(50%, -35%);
+    min-width: 17rem;
+    margin: 0 2rem;
+    height: 50rem;
+    border-radius: 1.5rem;
+    box-sizing: initial;
+    background-image: linear-gradient(to bottom, #3C57C8, #5742C8, #6039C8);
+    transition: 0.5s;
+}
+
+
+.list.active .title {
+    position: relative;
+    width: 12rem;
+    color: #fff;
+}
+
+ul .list.active .marker {
+    content: '';
+    position: absolute;
+    top: .5rem;
+    left: 13.4rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #fff;
+}
+
+ul .list.active .marker::after {
+    content: "";
+    left: 1.1rem;
+    top: 3.01rem;
+    position: absolute;
+    width: 1rem;
+    height: 1.5rem;
+    border-top-right-radius: 1rem;
+    z-index: 100;
+    background-image: linear-gradient(to bottom, #3C57C8, #5742C8, #6039C8);
+    box-shadow: 2px -10px 0 #fff;
+}
+
+ul .list.active .marker::before {
+    content: "";
+    left: 1.2rem;
+    top: -1.3rem;
+    position: absolute;
+    width: 1rem;
+    height: 1.3rem;
+    border-bottom-right-radius: 1rem;
+    z-index: 100;
+    background-image: linear-gradient(to top, #3C57C8);
+    box-shadow: 2px 10px 0 #fff;
+}
+
+
+.sideNavigationBar ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-66%);
+    left: 0;
+    width: 100%;
+    padding-left: .5rem;
+    padding-top: 4rem;
+}
+
+.sideNavigationBar ul li .title {
+    color: #9E9DE1;
+    font-weight: 600;
+    text-align: center;
+    padding: .2rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.sideNavigationBar ul li {
+    position: relative;
+    left: 1rem;
+    list-style: none;
+    width: 50%;
+    padding: .5rem;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+
+}
+
+.sideNavigationBar ul hr {
+    opacity: 0.4;
+    width: 60%;
+}
+
+.list .icon {
+    display: none;
+}
+
+.list.active .icon {
+    display: inline-block;
+    position: relative;
+    top: .2rem;
+    left: 8rem;
+    color: #b6b6b6
+}

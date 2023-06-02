@@ -1,0 +1,25 @@
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu;
+}
+
+.item4 {
+    grid-area: right;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'menu main main main right right right';
+    padding: 10px;
+}
+
+.grid-container>div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.8rem;
+}

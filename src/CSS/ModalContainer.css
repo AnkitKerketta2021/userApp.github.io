@@ -1,0 +1,31 @@
+.modalDetail {
+    text-align: center;
+}
+
+.MuiBox-root {
+    border-radius: 1rem;
+   
+}
+.signOutModalAvatar {
+    margin: auto;
+}
+
+.signOutModalAvatar img {
+    position: relative;
+
+}
+
+.userEmail {
+    font-size: 1.4rem;
+    color: #CDCDCD;
+}
+.modalDetail{
+    padding-top: 1rem;
+}
+.modalDetail hr{
+    opacity: 0.5;
+}
+.modalDetail Button{
+    border-radius: 2rem;
+    margin: 1rem auto;
+}
