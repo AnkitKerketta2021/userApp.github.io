@@ -12,7 +12,6 @@ function Router() {
   const pagePath = useLocation();
   let pathValue = pagePath.pathname.split("/")[1];
   let pathValue2 = pagePath.pathname;
-  console.log(pathValue2);
   if (pagePath.pathname.split("/").length <= 1) {
     pathValue = "login";
   }

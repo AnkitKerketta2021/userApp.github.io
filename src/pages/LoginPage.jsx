@@ -1,4 +1,4 @@
-import  React, { useContext } from "react";
+import  React from "react";
 import PropTypes from "prop-types";
 import Toolbar from "@mui/material/Toolbar";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
@@ -9,7 +9,6 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Fade from "@mui/material/Fade";
 import UserList from "./UserList";
 import "../CSS/LoginPage.css";
-import { GlobalState } from "../context/GlobalContext";
 
 // ? =============== Styling Objects ===============
 let loginPage_Style = {

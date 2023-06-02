@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { Avatar, Button } from "@mui/material";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { GlobalState } from "../context/GlobalContext";
 import axios from "axios";
 import "../CSS/ModalContainer.css";
@@ -32,9 +32,8 @@ const typographyStyle = {
 // ? ==================== Styling Objects End ====================
 
 function SignOutModal({ open, setOpen }) {
-  const navigate = useNavigate();
   const path = useLocation().pathname.split("/")[1];
-  const { user, allUser, loginUser } = useContext(GlobalState);
+  const { user, loginUser } = useContext(GlobalState);
   const [state, setstate] = useState(user[0].name);
   const [allTheUSers, setallTheUSers] = useState();
 
@@ -46,13 +45,12 @@ function SignOutModal({ open, setOpen }) {
     setallTheUSers(data.data.users);
   };
 
-
   // ? =============== re-render on state update ===============
   useEffect(() => {
     fetchUserApi();
 
-    setstate(user[0].name)
-  }, [user,state]);
+    setstate(user[0].name);
+  }, [user, state]);
 
   let randomNum = (Math.random() * 10).toFixed(0);
 
@@ -60,7 +58,6 @@ function SignOutModal({ open, setOpen }) {
     allTheUSers.map(
       (val, index) => val.name == allTheUSers[randomNum].name && loginUser(val)
     );
-
   };
 
   return (

@@ -1,11 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet/dist/leaflet.css"
 import { Icon } from "leaflet";
 import { GlobalState } from '../context/GlobalContext';
-
-
 
 //*  =================== Styling Objects ===================
 let mainContainer ={"position":'absolute',"marginTop":'5rem'}
@@ -14,21 +12,18 @@ let styling_p_Tag = {fontSize:'.7rem',fontWeight:600, float:'right'}
 let styling_span_Tag = {fontSize:'.7rem',color:"#B6B6B6"}
 
 function MapComponent() {
-    const context = useContext(GlobalState);
+    const {user} = useContext(GlobalState);
+    console.log(user[0].name);
 
-  const [state, setstate] = useState([
+  const [latLong, setlatLong] = useState();
 
-    // ? ==================== Some Users have invalid lat or long (below code is just to avoid errors) ==================== 
-    { geocode: [Number(context.user[0].address.geo.lat).toString()== "NaN"?Number(context.user[0].address.geo.lng):Number(context.user[0].address.geo.lat), Number(context.user[0].address.geo.lng).toString() == "NaN" ?Number(context.user[0].address.geo.lat):Number(context.user[0].address.geo.lng)],
-    popUp: context.user[0].name,
-    imgUrl: context.user[0].profilepicture,
-    }
-  ]
-);
+
+useEffect(() => {
+  setlatLong({ geocode: [Number(user[0].address.geo.lat).toString()== "NaN"?Number(user[0].address.geo.lng):Number(user[0].address.geo.lat), Number(user[0].address.geo.lng).toString() == "NaN" ?Number(user[0].address.geo.lat):Number(user[0].address.geo.lng)] })
+}, [user]);
 
 
 // ? ============== to show marker in the map ==============
-    const markers = state
     const customIcon = new Icon({
       iconUrl:
         "https://png.pngtree.com/png-clipart/20220131/original/pngtree-3d-pin-map-marker-location-front-view-png-image_7249831.png",
@@ -36,7 +31,7 @@ function MapComponent() {
     });
 
   return (
-    <div style={mainContainer}> 
+  latLong&&  <div style={mainContainer}> 
     <MapContainer
     style={mapContainer}
     center={[16, 70]}
@@ -46,18 +41,16 @@ function MapComponent() {
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright"'
       url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    {markers.map((marker,index) => (
-      <div key={index}>
-        <Marker position={marker.geocode} icon={customIcon}>
+      <div>
+        <Marker position={latLong.geocode} icon={customIcon}>
           <Popup>
-         <div style={{textAlign:'center'}}> <img width={40} height={40} style={{borderRadius:"50%"}} src={marker.imgUrl} alt="" /></div>
-            <h4>{marker.popUp}</h4>
+         <div style={{textAlign:'center'}}> <img width={40} height={40} style={{borderRadius:"50%"}} src={user[0].profilepicture} alt="" /></div>
+            <h4>{user[0].name}</h4>
           </Popup>
         </Marker>
       </div>
-    ))}
   </MapContainer>
-  <p style={styling_p_Tag}><span style={styling_span_Tag}>Lat:</span>- {state[0].geocode[0]} &nbsp;&nbsp;&nbsp;<span style={styling_span_Tag}>Long:</span>-{state[0].geocode[1]}</p>
+  <p style={styling_p_Tag}><span style={styling_span_Tag}>Lat:</span>- {latLong.geocode[0]} &nbsp;&nbsp;&nbsp;<span style={styling_span_Tag}>Long:</span>-{latLong.geocode[1]}</p>
   </div>
   )
 }
