@@ -9,3 +9,25 @@
     background: #D8D8D8;
     position: relative;
 }
+@media screen and (max-width:1024px) {
+    .css-gc8ip5-MuiPaper-root{
+        width: 400px;
+    }
+    
+}
+@media screen and (max-width:648px) {
+    .css-gc8ip5-MuiPaper-root{
+        margin-left: -60%;
+        margin-right: 40%;
+        width: 280px;
+    }
+    
+}
+@media screen and (max-width:320px) {
+    .css-gc8ip5-MuiPaper-root{
+        margin-left: -80%;
+        margin-right: 40%;
+        width: 270px;
+    }
+    
+}

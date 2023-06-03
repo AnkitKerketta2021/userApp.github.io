@@ -76,7 +76,7 @@ export default function LoginPage(props) {
         </svg>
       </div>
       <Toolbar id="back-to-top-anchor" />
-      <Container sx={{ height: "300px" }}>
+      <Container sx={{ height: "300px",width:'auto' }}>
         <Box sx={{ my: 2 }}>
           <UserList />
         </Box>

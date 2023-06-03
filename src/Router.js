@@ -16,7 +16,7 @@ function Router() {
     pathValue = "login";
   }
   return (
-    <div>
+    <div className="mainAppContainer">
       <div className="grid-container" style={{ width: "300px" }}>
         {pathValue !== "login" && pathValue2 !== "/" ? (
           <div className="item2">

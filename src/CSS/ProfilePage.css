@@ -54,7 +54,7 @@
 
 .detailSection1, .detailSection2, .detailSection3 {
     display: grid;
-    grid-template-columns: 110px 25px 1fr;
+    grid-template-columns: 88px 25px 1fr;
     text-align: justify;
 }
 

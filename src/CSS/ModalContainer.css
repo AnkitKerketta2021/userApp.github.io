@@ -4,8 +4,9 @@
 
 .MuiBox-root {
     border-radius: 1rem;
-   
+
 }
+
 .signOutModalAvatar {
     margin: auto;
 }
@@ -19,13 +20,16 @@
     font-size: 1.4rem;
     color: #CDCDCD;
 }
-.modalDetail{
+
+.modalDetail {
     padding-top: 1rem;
 }
-.modalDetail hr{
+
+.modalDetail hr {
     opacity: 0.5;
 }
-.modalDetail Button{
+
+.modalDetail Button {
     border-radius: 2rem;
     margin: 1rem auto;
 }

@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet/dist/leaflet.css"
 import { Icon } from "leaflet";
 import { GlobalState } from '../context/GlobalContext';
+import "../CSS/SignOutModal.css"
 
 //*  =================== Styling Objects ===================
 let mainContainer ={"position":'absolute',"marginTop":'5rem'}

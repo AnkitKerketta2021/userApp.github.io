@@ -10,7 +10,7 @@ import "../CSS/ModalContainer.css";
 
 // ? ==================== Styling Objects Start ====================
 const style = {
-  position: "absolute",
+  position: "relative",
   top: "42%",
   left: "85%",
   transform: "translate(-50%, -50%)",
@@ -64,6 +64,7 @@ function SignOutModal({ open, setOpen }) {
     allTheUSers && (
       <div className="modalContainer">
         <Modal
+        sx={{position:'absolute'}}
           open={open}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"

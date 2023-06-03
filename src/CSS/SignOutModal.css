@@ -45,21 +45,98 @@
 
 /* ! ========================= Media Queries ========================= */
 @media screen and (max-width: 1440px) {
-    .pageHeadContainer{
-       display: grid;
-       gap: 1rem;
-       margin-left: -24rem;
+    .pageHeadContainer {
+        display: grid;
+        gap: 1rem;
+        margin-left: -24rem;
     }
-    .headerLeft div.pageName{
+
+    .headerLeft div.pageName {
         position: absolute;
         left: -3rem;
         margin-top: 3.4rem;
     }
-    .headerRight{
+
+    .headerRight {
         position: relative;
         left: 28rem;
     }
+
+    .css-xi2ebv {}
 }
+
+@media screen and (min-width:2560px) {
+    .css-xi2ebv {
+        position: relative !important;
+        top: 22% !important;
+        left: 55% !important;
+    }
+
+}
+@media screen and (max-width:1440px) {
+    .css-xi2ebv {
+        position: fixed !important;
+        top: 42% !important;
+        left: 65% !important;
+        bottom: auto;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .css-xi2ebv {
+        position: fixed !important;
+        top: 35% !important;
+        left: 65% !important;
+        bottom: auto;
+    }
+ 
+
+
+}
+@media screen and (max-width:768px) {
+    .css-xi2ebv {
+        position: fixed !important;
+        top: 25% !important;
+        left: 65% !important;
+        bottom: auto;
+    }
+    .leaflet-container{
+        width: 60vw !important;
+    }
+
+}
+@media screen and (max-width:540px) {
+    .css-xi2ebv {
+        position: fixed !important;
+        top: 22% !important;
+        left: 65% !important;
+        bottom: auto;
+    }
+    .leaflet-container{
+        width: 68vw !important;
+    }
+
+}
+@media screen and (max-width:380px) {
+    .css-xi2ebv {
+        position: fixed !important;
+        top: 13% !important;
+        left: 66% !important;
+        bottom: auto;
+    }
+    .leaflet-container{
+        width: 80vw !important;
+    }
+
+}
+
+
+
+
+
+
+
 /* @media screen and (min-width: 1658px) {
     .pageHeadContainer{
     }
