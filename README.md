@@ -15,6 +15,8 @@ I have used
 2. Context API (for state management).
 3. Conditional Rendering
 
-# API Used
+## API Used
 Users Api: https://panorbit.in/api/users.json
 
+# Website Link
+netlify: https://user-app-2k23.netlify.app/
